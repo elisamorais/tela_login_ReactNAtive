@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 import * as Animatable from 'react-native-animatable';
 
@@ -12,14 +12,14 @@ export default function Welcome() {
             <View style={styles.containerLogo} >
                 <Animatable.Image
                     animation='flipInY'
-                    source={require('../../assets/logo.png')}
+                    source={require('../../assets/logoFundo.png')}
                     style={{ width: '100%'}}
                     resizeMode='contain'
                 />
             </View>
 
             <Animatable.View delay={600}  animation='fadeInUp' style={styles.containerForm}>
-                <Text style={styles.title}>Monitore, organize seus gastos de qualquer lugar!</Text>
+                <Text style={styles.title}>Acesse seus projetos num click</Text>
                 <Text style={styles.text}>Faça o login para começar</Text>
 
                 <TouchableOpacity 
@@ -37,17 +37,17 @@ export default function Welcome() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#38a69d',
+        backgroundColor: '#fff',
     },
     containerLogo: {
         flex: 2,
-        backgroundColor: '#38a69d',
+        backgroundColor: '#fff',
         justifyContent: 'center',
         alignItems: 'center',
     },
     containerForm: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#db9a8f',
         borderTopLeftRadius: 25,
         borderTopRightRadius: 25,
         paddingStart: '5%',
@@ -58,13 +58,17 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginTop: 28,
         marginBottom: 12,
+        textAlign: 'center',
+        color: '#fff',
     },
     text: {
-        color: '#a1a1a1',      
+        color: '#afff',
+        textAlign: 'center',
+
     },
     button: {
         position: 'absolute',
-        backgroundColor: '#38a69d',
+        backgroundColor: '#9a6775',
         borderRadius: 50,
         paddingVertical: 8,
         width: '60%',
